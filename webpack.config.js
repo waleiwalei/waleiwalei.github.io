@@ -32,7 +32,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'test'
+            title: 'test',
+            filename: '../index.html'
         }),
     ]
 }
