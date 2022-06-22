@@ -1,19 +1,18 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ScriptExt = require('script-ext-html-webpack-plugin')
 
 module.exports = {
     entry: {
         hello: {
             import: './src/index.js',
         }
-
     },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true
     },
-    target: "web",
+    // target: "web",
     mode: 'development',
     module: {
         rules: [
@@ -33,7 +32,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'test 6.22'
+            template: 'index.html',
+            filename: 'index.html'
         }),
     ]
 }
