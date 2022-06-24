@@ -30,10 +30,10 @@ module.exports = {
         hot: true,
         port: 8081,
     },
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         title: 'test',
-    //         filename: '../index.html'
-    //     }),
-    // ]
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'test',
+            filename: '../index.html'
+        }),
+    ]
 }
